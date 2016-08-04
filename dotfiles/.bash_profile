@@ -45,7 +45,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/.virtualenv-project-home
 
 alias idadir='cd /c/Users/ctfhacker/AppData/Roaming/Hex-Rays/IDA\ Pro/'
-
+alias vim='/c/Program\ Files\ \(x86\)/Vim/vim74/gvim.exe'
 
 if [ -d "${PYENV_ROOT}" ]; then
     export PATH="${PYENV_ROOT}/bin:${PATH}"
