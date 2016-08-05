@@ -1,6 +1,7 @@
 ConEmuSetup.160619.exe
 msys2-x86_64-20160205.exe
 gvim74.exe
+winsdk_web.exe
 reg import ConEmu.reg
 FOR /F %%i in ('DIR /B /A:D dotfiles') DO mkdir C:\msys64\home\%username%\%%i && xcopy /Y /S /E /H dotfiles\%%i C:\msys64\home\%username%\%%i
 FOR /F %%i in ('DIR /B /A:HD dotfiles') DO mkdir C:\msys64\home\%username%\%%i && xcopy /Y /S /E /H dotfiles\%%i C:\msys64\home\%username%\%%i
