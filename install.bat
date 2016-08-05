@@ -3,6 +3,7 @@ msys2-x86_64-20160205.exe
 gvim74.exe
 winsdk_web.exe
 reg import ConEmu.reg
+python-3.5.2-amd64.exe
 echo UNBLOCK THE PYKD DLLS... Right click pykd.dll and click unblock
 Pause
 copy pykd-dlls\x64\pykd.dll "C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\winext"
