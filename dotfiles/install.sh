@@ -10,3 +10,4 @@ python2 get-pip.py
 python3 get-pip.py
 pip install ipython
 pip3 install ipython
+cp bin/* /usr/bin
