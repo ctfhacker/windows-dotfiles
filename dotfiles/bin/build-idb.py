@@ -12,14 +12,14 @@ def main():
     ida = '/c/Program Files (x86)/IDA 6.9/idaq.exe'
 
     script = """import _idaapi,time
-    print "~"*132
-    _ = time.time()
-    print "build-idb.sh:waiting for ida's auto-analysis to finish (%s)"% (time.asctime(time.localtime()))
-    _idaapi.autoWait()
-    print "build-idb.sh:finished in %.3f seconds (%s)"% (time.time()-_, time.asctime(time.localtime()))
-    print "~"*132
-    _idaapi.save_database(_idaapi.cvar.database_idb, 0)
-    _idaapi.qexit(0)
+print "~"*132
+_ = time.time()
+print "build-idb.sh:waiting for ida's auto-analysis to finish (%s)"% (time.asctime(time.localtime()))
+_idaapi.autoWait()
+print "build-idb.sh:finished in %.3f seconds (%s)"% (time.time()-_, time.asctime(time.localtime()))
+print "~"*132
+_idaapi.save_database(_idaapi.cvar.database_idb, 0)
+_idaapi.qexit(0)
     """
 
     scriptname = '/tmp/script.py'
@@ -54,6 +54,8 @@ def save_idadir():
     
 def restore_idadir():
     # Restore idascripts back
+    username = getpass.getuser()
+    idadir = "/c/Users/{}/AppData/Roaming/Hex-Rays/IDA Pro".format(username)
     shutil.rmtree(idadir)
     shutil.move(idadir+'-buildidb', idadir)
 
@@ -62,9 +64,8 @@ if __name__ == '__main__':
 
     try:
         main()
-    except KeyboardInterrupt:
+    except:
+        pass
+    finally:
         restore_idadir()
-
-    restore_idadir()
-
 
