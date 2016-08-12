@@ -43,9 +43,12 @@ export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/.virtualenv-project-home
+mkdir -p WORKON_HOME
+source /bin/virtualenvwrapper.sh
 
-alias idadir='cd /c/Users/ctfhacker/AppData/Roaming/Hex-Rays/IDA\ Pro/'
+alias idadir="cd /c/Users/ctfhacker/AppData/Roaming/Hex-Rays"
 alias vim='/c/Program\ Files\ \(x86\)/Vim/vim74/gvim.exe'
+
 
 if [ -d "${PYENV_ROOT}" ]; then
     export PATH="${PYENV_ROOT}/bin:${PATH}"
