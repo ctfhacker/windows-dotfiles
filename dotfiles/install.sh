@@ -11,3 +11,4 @@ python3 get-pip.py
 pip install ipython
 pip3 install ipython
 cp bin/* /usr/bin
+pip install virtualenvwrapper
